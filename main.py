@@ -16,7 +16,7 @@ user_info.read_user_file()
 user_task.save_tasks()
 user_info.save_user()
 
-#loading("Please wait ", 3, "", 0)
+loading("Please wait ", 3, "", 0)
 
 time_show = 1
 important_edit = False
@@ -342,3 +342,4 @@ while True:
         break
 
 #======================================================================end===============================================================
+
