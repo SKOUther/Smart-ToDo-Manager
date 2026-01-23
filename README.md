@@ -1,6 +1,8 @@
 
 🚀 Smart To-Do List Manager (2026 Edition)
+
 Welcome to my first comprehensive Python project! This isn't just a simple list; it's a Logic-Driven Task Management System designed with a focus on data integrity, user experience, and defensive programming.
+
 Built from scratch during my 4th month of learning Python, this project represents over 10 days of intensive logic architectural work.
 
 
@@ -14,6 +16,7 @@ Built from scratch during my 4th month of learning Python, this project represen
 ● Self-Healing Storage: Integrated with JSON, the system automatically detects corrupted files or missing values (is deleted) and prompts the user for immediate repair.
 
 ● Smart Auto-Time: Features an intelligent scheduling algorithm that can automatically set task deadlines by adding 30-minute increments to the last recorded task.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🔍 Multi-Layered Search Engine
@@ -21,6 +24,7 @@ Built from scratch during my 4th month of learning Python, this project represen
 ● Temporal Categorization: A sophisticated search function that classifies tasks into Past, Present (Today), and Future views.
 
 ● Customized Filters: Users can search by Title, Status, or use a Comprehensive Search that combines all three parameters for pinpoint accuracy.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 👤 Robust User Management
@@ -30,6 +34,7 @@ Built from scratch during my 4th month of learning Python, this project represen
 ● Privacy First: Includes a "Prefer not to say" option for gender while maintaining system functionality.
 
 ● Age-Gate Protection: Implements a strict policy for users aged 7 and above.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🎨 Minimalist Terminal UI
@@ -37,6 +42,7 @@ Built from scratch during my 4th month of learning Python, this project represen
 ● Visual Feedback: Uses ANSI color coding (Green for success, Red for errors, Blue for info) to make the CLI intuitive.
 
 ● UX Touches: Features custom loading animations and "Type-writer" effects to provide a modern feel to the terminal.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <img width="1121" height="555" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/e23944df-45ee-47b3-858d-b0d1f62ba297" />
@@ -58,6 +64,7 @@ The project is divided into a modular structure to ensure maintainability:
 5. search_logic.py: Dedicated engine for all search and filtering operations.
  
 6. ui.py: Handles terminal clearing, coloring, and timing animations.
+   
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🚀 How to Run
@@ -69,6 +76,7 @@ The project is divided into a modular structure to ensure maintainability:
 
 “The logic was simpler than the complexity I imagined, yet the journey of building it taught me the soul of clean code.”
 Developed with ❤️ by a passionate Python Learner.
+
 
 
 
