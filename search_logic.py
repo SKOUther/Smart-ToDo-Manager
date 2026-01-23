@@ -1,6 +1,6 @@
 #===================================Libraries====================================
 from logic import Task
-from ui import custom_time, clear, Search_loading, RED, RESET
+from ui import custom_time, clear, Search_loading, RED, YELLOW, GREEN, RESET
 from datetime import datetime
 #================================================================================
 
@@ -18,15 +18,14 @@ def search_for_title(title_search):
                 if show_message and found:
                     print("")
                     print(f"The following tasks were found as title: '{title_search}':\n\n")
-                    custom_time(.5)
+                    custom_time(.8)
                     print("====Task Search====\n\n")
                     show_message = False
 
                 print("Task number:", i)
                 for key, value in search.items():
-                    print(key, ":", value)
-                print("-" * 30)
-                print("")
+                    print(YELLOW + f"{key:14}" + RESET + ":" + GREEN + f"{value}" + RESET)
+                print("-" * 30 + "\n") 
     except:
         print("Something went wrong!")
         custom_time(1.5)
@@ -105,7 +104,7 @@ def search_for_time(time_search):
                 if show_message and found:
                     print("")
                     print(f"The following tasks were found as time: '{time_search}':\n\n")
-                    custom_time(.5)
+                    custom_time(.8)
                     print("====Task Search====\n\n")
                     show_message = False
 
@@ -118,9 +117,8 @@ def search_for_time(time_search):
                     if search["Task time"][0:10] == earlier_time and search["Task time"][11:] == time_search:
                         print("Task number:", i)
                         for key, value in search.items():
-                            print(key, ":", value)
-                        print("-" * 30)
-                        print("")
+                            print(YELLOW + f"{key:14}" + RESET + ":" + GREEN + f"{value}" + RESET)
+                        print("-" * 30 + "\n") 
                 # - - -
 
                 #Present
@@ -132,9 +130,8 @@ def search_for_time(time_search):
                     if search["Task time"][0:10] == modern_time and search["Task time"][11:] == time_search:
                         print("Task number:", i)
                         for key, value in search.items():
-                            print(key, ":", value)
-                        print("-" * 30)
-                        print("")
+                            print(YELLOW + f"{key:14}" + RESET + ":" + GREEN + f"{value}" + RESET)
+                        print("-" * 30 + "\n") 
                 # - - -
 
                 #Future
@@ -146,9 +143,8 @@ def search_for_time(time_search):
                     if search["Task time"][0:10] == coming_time and search["Task time"][11:] == time_search:
                         print("Task number:", i)
                         for key, value in search.items():
-                            print(key, ":", value)
-                        print("-" * 30)
-                        print("")
+                            print(YELLOW + f"{key:14}" + RESET + ":" + GREEN + f"{value}" + RESET)
+                        print("-" * 30 + "\n") 
                 # - - -
     
     except:
@@ -173,15 +169,14 @@ def search_for_status(status_search):
                 if show_message and found:
                     print("")
                     print(f"The following tasks were found as status: '{status_search}':\n\n")
-                    custom_time(.5)
+                    custom_time(.8)
                     print("====Task Search====\n\n")
                     show_message = False
                 
                 print("Task number:", i)
                 for key, value in search.items():
-                    print(key, ":", value)
-                print("-" * 30)
-                print("")
+                    print(YELLOW + f"{key:14}" + RESET + ":" + GREEN + f"{value}" + RESET)
+                print("-" * 30 + "\n") 
                 
     except:
         print("Something went wrong!")
@@ -217,12 +212,12 @@ def do_custom_search(title_search, time_search, status_search):
             return False
         
         print("\n" + (one_task if found == 1 else more_tasks))
-        custom_time(.5)
+        custom_time(.8)
         print("====Task Search====\n\n")
 
         for t in tasks_found:
             for k, v in t.items():
-                print(f"{k:14} : {v}")
+                print(YELLOW + f"{k:14}" + RESET + ":" + GREEN + f"{v}" + RESET)
             print("-" * 30 + "\n")           
         return True 
                 
@@ -230,5 +225,34 @@ def do_custom_search(title_search, time_search, status_search):
         print("Something went wrong!")
         custom_time(1.5)
         return False  
+
+'''Search by task number'''
+
+def search_by_number(task_number):
+    clear()
+    show_message = True
+    tasks_numbers = len(Task.to_do_list)
+    task_number -= 1
+    Search_loading()
+    try:
+        if 0 <= task_number < tasks_numbers:
+            if show_message:
+                print("")
+                print(f"The following tasks were found as task number: '{task_number+1}':\n\n")
+                custom_time(.8)
+                print("====Task Search====\n\n")
+                show_message = False
+            result = Task.to_do_list[task_number]
+            print("Task number:", task_number+1)
+            for k, v in result.items():
+                print(YELLOW + f"{k:14}" + RESET + ":" + GREEN + f"{v}" + RESET)
+            print("-" * 30 + "\n") 
+            return True        
+        else:
+            return False
+    except:
+        print("Something went wrong!")
+        custom_time(1.5)
+        return False
 
 #================================================================================
