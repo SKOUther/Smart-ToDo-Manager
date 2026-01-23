@@ -2,7 +2,7 @@
 from logic import Task, User, is_valid_num, is_valid_title, is_valid_time, is_valid_status
 from logic import is_user_available, has_task, ask_for_data
 from file_logic import read_task_file_if_true, read_user_file_if_true
-from search_logic import search_for_title, search_for_time, search_for_status, do_custom_search
+from search_logic import search_for_title, search_for_time, search_for_status, do_custom_search, search_by_number
 from ui import custom_time, clear, loading, wait_user, RED, GREEN, BLUE, YELLOW, RESET
 #================================================================================
 
@@ -16,7 +16,7 @@ user_info.read_user_file()
 user_task.save_tasks()
 user_info.save_user()
 
-loading("Please wait ", 3, "", 0)
+#loading("Please wait ", 3, "", 0)
 
 time_show = 1
 important_edit = False
@@ -33,7 +33,7 @@ while True:
 
     if isinstance(user_info.age, int):
         if user_info.age < 7:
-            print("Sorry, you are under the age limit, which is 7 years and above.")
+            print(RED + "Sorry, you are under the age limit, which is 7 years and above." + RESET)
             exit()
 
     if not user_info.name:
@@ -82,7 +82,7 @@ while True:
             n += 1
             task_numbers.append(str(n))
 
-        print(RED + f"Sorry, task number {', '.join(task_numbers)} gaveing with a wrong valiue!\nPlease edit\delete task." + RESET)
+        print(RED + f"Sorry, task number {', '.join(task_numbers)} gaveing with a wrong value!\nPlease edit\delete task." + RESET)
         custom_time(3.5)
         
         while True:
@@ -101,7 +101,7 @@ while True:
                     user_task.delete_task()
                     break
                 else:
-                    print("Type only from the options")
+                    print("Type only from the options.")
                     custom_time(1.5)
 
             except:
@@ -152,8 +152,7 @@ while True:
         
     #show list tasks
     elif help_with == '4':
-        if not user_task.show_tasks(True):
-            continue
+        if not user_task.show_tasks(True): continue
         wait_user()
         continue 
         
@@ -172,29 +171,26 @@ while True:
 
     #print user info
     elif help_with == '7':
-        if not is_user_available(user_info):
-            continue
+        if not is_user_available(user_info): continue
         user_info.show_user_info()
         custom_time(5.5)
 
     #change user info
     elif help_with == '8':
-        if not is_user_available(user_info):
-            continue
+        if not is_user_available(user_info): continue
         important_edit = False
         read_user_file = True
         while True:
             clear()
             print("\nI want change my:\n")
             print("   1) Name.")
-            print("   2) Age/Birth.")
+            print(YELLOW + "   2) Age/Birth." + RESET)
             print("   3) Gender.")
-            print("   4) Nothing.\n")
+            print(RED + "   4) Nothing.\n" + RESET)
             change = is_valid_num(4, "change")
-            if not change:
-                continue
-            if change == '4':
-                break
+
+            if not change: continue
+            if change == '4': break
 
             if change == '1':
                 user_info.change_user_info("new_name")
@@ -214,8 +210,7 @@ while True:
     #search
     elif help_with == '9':
         data_available = has_task()
-        if not data_available:
-            continue
+        if not data_available: continue
         while True:
             clear()
             print("\nI want to search for:\n")
@@ -223,11 +218,13 @@ while True:
             print("   2) Time task/s.")
             print("   3) Status task/s.")
             print(YELLOW + "   4) Comprehensive/Customized Search." + RESET)
-            print(RED + "   5) Nothing.\n" + RESET)
+            print(YELLOW + "   5) By task number." + RESET)
+            print(RED + "   6) Nothing.\n" + RESET)
             try:
-                search_for = is_valid_num(5, "search")
+                search_for = is_valid_num(6, "search")
                 if not search_for: continue
 
+                #title search
                 if search_for == '1':
                     title_search = is_valid_title("searching", similar=False)
                     if not title_search: continue
@@ -244,6 +241,7 @@ while True:
                        wait_user()
                        continue 
 
+                #time search
                 elif search_for == '2':
                     time_search = is_valid_time(True, False)
                     if not time_search: continue
@@ -262,6 +260,7 @@ while True:
                        wait_user()
                        continue 
 
+                #status search
                 elif search_for == '3':
                     status_search = is_valid_status(False)
                     if not status_search: continue
@@ -278,6 +277,7 @@ while True:
                        wait_user()
                        continue 
                 
+                #custom Search
                 elif search_for == '4':
                     while True:
                         title_search = is_valid_title("searching", similar=False)
@@ -299,9 +299,32 @@ while True:
                             wait_user()
                             break
                     continue 
-                
+
+                #search by task number
                 elif search_for == '5':
-                    break
+                    try:
+                        clear()
+                        num = int(input("Type task number: "))
+                        custom_time(.3)
+                        clear()
+                        if num <= 0:
+                            print("The task number cannot be zero or less.")
+                            custom_time(1.5)
+                            continue
+                        if num > 0:
+                            search = search_by_number(num)
+                            if not search:
+                                print(f"Sorry, we couldn't find a similar task has number {num}.")
+                                custom_time(1.9)
+                                continue
+                            else:
+                                wait_user()
+                    except:
+                        print("Enter only a whole number that is not equal to zero.")
+                        custom_time(1.5)
+                        continue
+                #exit              
+                elif search_for == '6': break
 
                 else:
                     print("\nInvalid input. enter a value from options.")
