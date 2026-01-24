@@ -2,6 +2,7 @@
 from storage import save_data, use_data, save_user_info, use_user_data
 from datetime import datetime, timedelta
 from string import digits, ascii_lowercase
+from confirmation import confirm_task
 from ui import clear, custom_time, loading, RED, GREEN, BLUE, YELLOW, CYAN, RESET
 #================================================================================
 
@@ -24,7 +25,13 @@ class Task:
             "Task time": time,
             "Task status": status
         }
-        return Task.to_do_list.append(adding_task)
+        
+        save_task = confirm_task(adding_task)
+        if save_task:
+            loading("Adding your task ", 4, "Your task has been added.", 1.2)
+            return Task.to_do_list.append(adding_task)
+        else:
+            return save_task
 
     #first: print all tasks in the list, start with its number.
     #then: ask him to choose a num between 1 to the limit num task in a task list.
@@ -1011,3 +1018,4 @@ def ask_for_data(user_info):
     return user_info
 
 #================================================================================
+
