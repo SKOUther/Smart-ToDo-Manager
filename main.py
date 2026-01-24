@@ -139,7 +139,6 @@ while True:
         user_task_status = is_valid_status(mark=False)
         user_task.add_task(user_task_title, user_task_time, user_task_status)
         user_task.save_tasks()
-        loading("Adding your task ", 4, "Your task has been added.", 1.2)
         continue
 
     #update task
@@ -342,4 +341,5 @@ while True:
         break
 
 #======================================================================end===============================================================
+
 
