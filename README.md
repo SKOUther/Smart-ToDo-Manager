@@ -110,6 +110,7 @@ Designed to make terminal interaction feel modern and engaging.
 📸 Preview
 
 <img width="1121" height="555" alt="Project Screenshot" src="https://github.com/user-attachments/assets/e23944df-45ee-47b3-858d-b0d1f62ba297" />
+<img width="970" height="492" alt="Screenshot (16)" src="https://github.com/user-attachments/assets/610895b1-39f4-4727-860a-89d1347b8262" />
 <img width="882" height="517" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/8cfee2d2-8c7c-4571-8818-1360e68083d4" />
 <img width="987" height="482" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/1e62d4cc-b21a-4a51-a89d-9a41a3b3d652" />
 <img width="927" height="411" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/22ba1a0d-ef8c-4afe-9fb7-dab3b65120eb" />
@@ -156,3 +157,4 @@ The project follows a modular architecture for scalability and clarity:
 yet the journey of building it taught me the soul of clean code.”
 
 Developed with ❤️ by a passionate Python learner.
+
