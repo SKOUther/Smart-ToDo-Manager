@@ -139,6 +139,9 @@ The project follows a modular architecture for scalability and clarity:
 6. ui.py  
    Terminal visuals, screen control, animations, and timing effects.
 
+7. confirmation.py
+   Manages task confirmation flow by presenting task details for user review and saving tasks only after explicit approval.
+
 ---
 
 🚀 How to Run
@@ -157,5 +160,6 @@ The project follows a modular architecture for scalability and clarity:
 yet the journey of building it taught me the soul of clean code.”
 
 Developed with ❤️ by a passionate Python learner.
+
 
 
