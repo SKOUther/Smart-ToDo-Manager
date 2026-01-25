@@ -1,82 +1,158 @@
-
 🚀 Smart To-Do List Manager (2026 Edition)
 
-Welcome to my first comprehensive Python project! This isn't just a simple list; it's a Logic-Driven Task Management System designed with a focus on data integrity, user experience, and defensive programming.
+Welcome to my first comprehensive Python project!
 
-Built from scratch during my 4th month of learning Python, this project represents over 10 days of intensive logic architectural work.
+This is not just a simple to-do list.  
+It is a **Logic-Driven Task Management System** built with strong focus on:
 
+- Data integrity
+- Defensive programming
+- Logical flow design
+- User-controlled decisions
 
-🌟 Key Features:
+Built from scratch during my 4th month of learning Python, this project represents over **10 days of deep logical architecture work**, experimentation, debugging, and redesign.
 
+---
 
-🧠 Intelligent Data Validation (The Core)
+🌟 Key Features
 
-● Advanced Logic Flow: Unlike basic apps, this system uses a "Strict-to-General" validation filter. It prioritizes Time and Status checks before assigning Titles to prevent data overlap.
+🧠 Intelligent Data Validation (Core System)
 
-● Self-Healing Storage: Integrated with JSON, the system automatically detects corrupted files or missing values (is deleted) and prompts the user for immediate repair.
+● Strict-to-General Validation Flow  
+The system validates critical data (Time, Status) before assigning Titles to prevent logical conflicts and data overlap.
 
-● Smart Auto-Time: Features an intelligent scheduling algorithm that can automatically set task deadlines by adding 30-minute increments to the last recorded task.
+● Self-Healing Storage (JSON)  
+Automatically detects:
+- Missing values  
+- Deleted fields  
+- Corrupted task data  
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The system then prompts the user to repair the file instead of crashing.
 
-🔍 Multi-Layered Search Engine
+● Smart Auto-Time Scheduling  
+Automatically assigns task time by adding **30-minute increments** based on the last recorded task.
 
-● Temporal Categorization: A sophisticated search function that classifies tasks into Past, Present (Today), and Future views.
+---
 
-● Customized Filters: Users can search by Title, Status, or use a Comprehensive Search that combines all three parameters for pinpoint accuracy.
+🔍 Advanced Multi-Layered Search Engine
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+● Search by Task Number  
+Allows direct access to tasks using their numerical index.
+
+● Temporal Classification  
+Tasks are automatically categorized into:
+- Past Tasks  
+- Today’s Tasks  
+- Future Tasks  
+
+● Flexible Filters  
+Search by:
+- Title  
+- Status  
+- Time  
+- Or a comprehensive combined search
+
+Designed to return accurate results even when multiple tasks share similar attributes.
+
+---
+
+✅ Task Confirmation System
+
+● Preview Before Saving  
+Before a task is saved, the system displays the complete task details to the user.
+
+● User Decision Control  
+The task is saved **only after explicit user confirmation**.
+
+This prevents accidental task creation and reinforces intentional input.
+
+---
 
 👤 Robust User Management
 
-● Profile Integrity: Validates user info (Name, Age, Gender, Birth) with cross-checks. It automatically calculates age based on the birth year and vice versa.
+● Profile Integrity Checks  
+Validates:
+- Name
+- Age
+- Gender
+- Birth year
 
-● Privacy First: Includes a "Prefer not to say" option for gender while maintaining system functionality.
+Includes cross-validation:
+- Age → Birth year  
+- Birth year → Age  
 
-● Age-Gate Protection: Implements a strict policy for users aged 7 and above.
+Ensures consistency at all times.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+● Privacy-First Design  
+Includes a **“Prefer not to say”** gender option while maintaining full system functionality.
+
+● Age-Gate Protection  
+Restricts system usage to users aged **7 and above**.
+
+---
 
 🎨 Minimalist Terminal UI
 
-● Visual Feedback: Uses ANSI color coding (Green for success, Red for errors, Blue for info) to make the CLI intuitive.
+● ANSI Color Feedback  
+- Green → success  
+- Red → errors  
+- Blue → information  
 
-● UX Touches: Features custom loading animations and "Type-writer" effects to provide a modern feel to the terminal.
+● Enhanced CLI Experience  
+Includes:
+- Loading animations  
+- Typewriter-style text output  
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Designed to make terminal interaction feel modern and engaging.
 
-<img width="1121" height="555" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/e23944df-45ee-47b3-858d-b0d1f62ba297" />
+---
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📸 Preview
+
+<img width="1121" height="555" alt="Project Screenshot" src="https://github.com/user-attachments/assets/e23944df-45ee-47b3-858d-b0d1f62ba297" />
+<img width="882" height="517" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/8cfee2d2-8c7c-4571-8818-1360e68083d4" />
+<img width="987" height="482" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/1e62d4cc-b21a-4a51-a89d-9a41a3b3d652" />
+<img width="927" height="411" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/22ba1a0d-ef8c-4afe-9fb7-dab3b65120eb" />
+
+---
 
 🛠 Project Architecture
 
-The project is divided into a modular structure to ensure maintainability:
+The project follows a modular architecture for scalability and clarity:
 
-1. main.py: The orchestrator (The Maestro) that manages the application flow.
- 
-2. logic.py: Contains the Task and User classes and core validation functions.
-   
-3. file_logic.py: The "Scanner" module; dedicated to identifying corrupted data fields and ensuring file consistency.
-  
-4. storage.py: Manages JSON I/O operations and data recovery.
-   
-5. search_logic.py: Dedicated engine for all search and filtering operations.
- 
-6. ui.py: Handles terminal clearing, coloring, and timing animations.
-   
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. main.py  
+   The orchestrator that controls program flow.
+
+2. logic.py  
+   Contains Task and User classes and core validation logic.
+
+3. file_logic.py  
+   Data integrity scanner that detects and repairs corrupted fields.
+
+4. storage.py  
+   Handles JSON read/write operations and safe data recovery.
+
+5. search_logic.py  
+   Dedicated engine for all search, filtering, and categorization logic.
+
+6. ui.py  
+   Terminal visuals, screen control, animations, and timing effects.
+
+---
 
 🚀 How to Run
-1. Ensure you have Python 3.10+ installed.
+
+1. Make sure Python 3.10+ is installed.
 2. Clone the repository.
-3. Run python main.py.
-4. Follow the "beautiful" prompts to manage your day!
------------------------------------------------------------------------------------------------------------------------
+3. Run:
 
-“The logic was simpler than the complexity I imagined, yet the journey of building it taught me the soul of clean code.”
-Developed with ❤️ by a passionate Python Learner.
+   python main.py
 
+4. Follow the interactive prompts to manage your tasks.
 
+---
 
+“The logic was simpler than the complexity I imagined,  
+yet the journey of building it taught me the soul of clean code.”
 
+Developed with ❤️ by a passionate Python learner.
